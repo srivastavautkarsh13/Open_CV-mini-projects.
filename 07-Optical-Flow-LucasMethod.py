@@ -7,26 +7,10 @@ corner_track_params = dict(maxCorners = 50,
                        minDistance = 7,
                        blockSize = 7 )
 
-
-# ### Parameters for Lucas Kanade Optical Flow
-# 
-# Detect the motion of specific points or the aggregated motion of regions by modifying the winSize argument. This determines the integration window size. Small windows are more sensitive to noise and may miss larger motions. Large windows will “survive” an occlusion.
-# 
-# The integration appears smoother with the larger window size.
-# 
-# criteria has two here - the max number (10 above) of iterations and epsilon (0.03 above). More iterations means a more exhaustive search, and a smaller epsilon finishes earlier. These are primarily useful in exchanging speed vs accuracy, but mainly stay the same.
-# 
-# When maxLevel is 0, it is the same algorithm without using pyramids (ie, calcOpticalFlowLK). Pyramids allow finding optical flow at various resolutions of the image. 
-
-# In[3]:
-
 # Parameters for lucas kanade optical flow
 lk_params = dict( winSize  = (200,200),
                   maxLevel = 2,
                   criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10,0.03))
-
-
-# In[ ]:
 
 # Capture the video
 cap = cv2.VideoCapture(0)
@@ -34,7 +18,7 @@ cap = cv2.VideoCapture(0)
 # Grab the very first frame of the stream
 ret, prev_frame = cap.read()
 
-# Grab a grayscale image (We will refer to this as the previous frame)
+# Grab a grayscale image
 prev_gray = cv2.cvtColor(prev_frame, cv2.COLOR_BGR2GRAY)
 
 # Grabbing the corners
