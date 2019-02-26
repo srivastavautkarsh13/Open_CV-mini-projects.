@@ -1,16 +1,4 @@
-
-# coding: utf-8
-
-# <a href="https://www.pieriandata.com"><img src="../DATA/Logo.jpg"></a>
-# *Copyright Pierian Data Inc.*
-
-# # Tracking APIs ( Built-in with OpenCV)
-
-# In[1]:
-
 import cv2
-
-# In[2]:
 
 def ask_for_tracker():
     print("Welcome! What Tracker API would you like to use?")
@@ -34,30 +22,10 @@ def ask_for_tracker():
 
 
     return tracker
- 
-
-
-# In[3]:
 
 tracker = ask_for_tracker()
 
-
-# In[4]:
-
-tracker
-
-
-# In[6]:
-
 str(tracker).split()[0][1:]
-
-
-# In[6]:
-
-# str(tracker).split()[0][1:]
-
-
-# In[10]:
 
 tracker = ask_for_tracker()
 tracker_name = str(tracker).split()[0][1:]
@@ -110,9 +78,3 @@ while True:
         
 cap.release()
 cv2.destroyAllWindows()
-
-
-# In[ ]:
-
-
-
