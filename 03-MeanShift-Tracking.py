@@ -1,13 +1,3 @@
-
-# coding: utf-8
-
-# <a href="https://www.pieriandata.com"><img src="../DATA/Logo.jpg"></a>
-# *Copyright Pierian Data Inc.*
-
-# # MeanShift Tracking
-
-# In[1]:
-
 import numpy as np
 import cv2 
 
@@ -16,10 +6,6 @@ cap = cv2.VideoCapture(0)
 
 # take first frame of the video
 ret,frame = cap.read()
-
-
-# Set Up the Initial Tracking Window
-
 
 # We will first detect the face and set that as our starting box.
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -74,9 +60,3 @@ while True:
         
 cv2.destroyAllWindows()
 cap.release()
-
-
-# In[ ]:
-
-
-
